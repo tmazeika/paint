@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import MenuBar from './MenuBar';
 import MenuButton from './MenuButton';
+import MenuDivider from './MenuDivider';
 import MenuItem from './MenuItem';
 
 const Header: FC = (): JSX.Element => (
@@ -8,6 +9,7 @@ const Header: FC = (): JSX.Element => (
     <MenuButton value="File">
       <MenuItem image="N" value="New" hotkey="Ctrl N" />
       <MenuItem value="Open" />
+      <MenuDivider />
       <MenuItem value="Open Recent">
         <MenuItem value="Submenu 1" />
         <MenuItem value="Submenu 2" hotkey="Ctrl N">
