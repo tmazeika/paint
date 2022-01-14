@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-popup {
+    @apply absolute z-20 p-0.5 rounded border border-slate-800 bg-slate-900 grid;
+    grid-template-columns: repeat(4, max-content) 0;
+  }
+
+  .menu-popup::before {
+    @apply absolute -inset-6;
+    content: '';
+    /* DEBUG: background-color: rgba(255, 0, 0, 0.1); */
+  }
+
+  .primary-menu-popup {
+    @apply menu-popup left-[-1px] rounded-tl-none before:top-0;
+  }
+
+  .secondary-menu-popup {
+    @apply menu-popup;
+    top: calc(-1px - theme('spacing[0.5]'));
+    left: calc(100% + theme('spacing[0.5]'));
+  }
+
+  .menu-item-row {
+    @apply contents;
+  }
+
+  .menu-item-row:hover > .menu-item-col {
+    @apply bg-sky-700;
+  }
+
+  .menu-item-row:hover > .menu-item-col-r {
+    @apply text-sky-300;
+  }
+
+  .menu-item-col {
+    @apply z-10 py-0.5 text-left;
+  }
+
+  .menu-item-col-r {
+    @apply text-right text-gray-600;
+  }
+}
