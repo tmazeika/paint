@@ -43,3 +43,11 @@
     @apply text-right text-gray-600;
   }
 }
+
+@layer utilities {
+  .app-grid {
+    @apply grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: min-content auto min-content;
+  }
+}

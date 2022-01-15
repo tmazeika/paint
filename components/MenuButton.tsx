@@ -1,16 +1,15 @@
 import type { FC } from 'react';
-import { useContext } from 'react';
-import { MenuBarContext } from './MenuBar';
+import useMutexButton from '../hooks/useMutexButton';
 
 const MenuButton: FC<{
   value: string;
 }> = ({ value, children }) => {
-  const { activeId, onClick, onPointerEnter, onPointerLeave } = useContext(MenuBarContext);
+  const { activeId, onClick, onPointerEnter, onPointerLeave } = useMutexButton();
   const isActive = value === activeId && children !== undefined;
 
   return (
     <button
-      className={`relative px-2 rounded-sm border border-transparent hover:bg-sky-700 hover:border-sky-600 ${
+      className={`relative px-2 cursor-default rounded-sm border border-transparent hover:bg-sky-700 hover:border-sky-600 ${
         isActive ? 'rounded-b-none' : ''
       }`}
       onClick={() => onClick(value)}
@@ -18,7 +17,11 @@ const MenuButton: FC<{
       onPointerLeave={() => onPointerLeave(value)}
     >
       {value}
-      {isActive && <div className="primary-menu-popup">{children}</div>}
+      {isActive && (
+        <div className="primary-menu-popup" onClick={(e) => e.stopPropagation()}>
+          {children}
+        </div>
+      )}
     </button>
   );
 };
