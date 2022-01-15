@@ -1,12 +1,10 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { FC } from 'react';
 import { useContext } from 'react';
 import { MenuBarContext } from './MenuBar';
 
-const MenuButton: FC<
-  PropsWithChildren<{
-    value: string;
-  }>
-> = ({ value, children }): JSX.Element => {
+const MenuButton: FC<{
+  value: string;
+}> = ({ value, children }) => {
   const { activeId, onClick, onPointerEnter, onPointerLeave } = useContext(MenuBarContext);
   const isActive = value === activeId && children !== undefined;
 

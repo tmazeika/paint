@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { FC } from 'react';
 import React, { useCallback, useMemo, useState } from 'react';
 
 export const MenuBarContext = React.createContext({
@@ -14,11 +14,9 @@ export const MenuBarContext = React.createContext({
   },
 });
 
-const MenuBar: FC<
-  PropsWithChildren<{
-    className?: string | undefined;
-  }>
-> = ({ className, children }): JSX.Element => {
+const MenuBar: FC<{
+  className?: string;
+}> = ({ className, children }) => {
   const [activeId, setActiveId] = useState<string | null>(null);
   const hasActiveId = activeId !== null;
   const onClick = useCallback((newId: string) => {
