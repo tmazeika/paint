@@ -1,14 +1,12 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { FC } from 'react';
 import React, { useState } from 'react';
 
-const MenuItem: FC<
-  PropsWithChildren<{
-    image?: React.ReactNode;
-    value: React.ReactNode;
-    hotkey?: React.ReactNode;
-    onClick?(this: void): void;
-  }>
-> = ({ image, value, hotkey, onClick, children }): JSX.Element => {
+const MenuItem: FC<{
+  image?: React.ReactNode;
+  value: React.ReactNode;
+  hotkey?: React.ReactNode;
+  onClick?(this: void): void;
+}> = ({ image, value, hotkey, onClick, children }) => {
   const [isActive, setIsActive] = useState(false);
   const hasImage = image !== undefined;
   const hasHotkey = hotkey !== undefined;

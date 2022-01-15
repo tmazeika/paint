@@ -4,7 +4,7 @@ import MenuButton from './MenuButton';
 import MenuDivider from './MenuDivider';
 import MenuItem from './MenuItem';
 
-const Header: FC = (): JSX.Element => (
+const Header: FC = () => (
   <MenuBar className="p-1 bg-gray-900">
     <MenuButton value="File">
       <MenuItem image="N" value="New" hotkey="Ctrl N" />
