@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import React from 'react';
-import { MenuPopup, useMenuController } from '../features/menu';
 import useMutexButtons from '../hooks/useMutexButtons';
+import { MenuPopup, useMenuController } from './features/menu';
 import MutexButtonsProvider from './MutexButtonsProvider';
 
 const ToolButton: FC<{

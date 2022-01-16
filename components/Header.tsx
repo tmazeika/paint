@@ -1,6 +1,6 @@
 import { faCoffee, faFile, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import type { FC } from 'react';
-import { MenuBar, MenuButton, MenuDivider, MenuItem } from '../features/menu';
+import { MenuBar, MenuButton, MenuDivider, MenuItem } from './features/menu';
 
 const Header: FC = () => (
   <header className="bg-gray-900 border-b border-gray-800">

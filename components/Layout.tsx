@@ -3,7 +3,7 @@ import { faAdjust, faCropAlt, faFillDrip, faMousePointer, faPaintBrush } from '@
 import Head from 'next/head';
 import type { FC } from 'react';
 import React from 'react';
-import { MenuItem } from '../features/menu';
+import { MenuItem } from './features/menu';
 import Header from './Header';
 import ToolBar from './ToolBar';
 import ToolButton from './ToolButton';

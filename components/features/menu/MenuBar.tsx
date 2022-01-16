@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import React from 'react';
-import MutexButtonsProvider from '../../components/MutexButtonsProvider';
+import MutexButtonsProvider from '../../MutexButtonsProvider';
 
 const MenuBar: FC = ({ children }) => (
   <div className="p-1">

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import type { FC } from 'react';
 import { useEffect } from 'react';
-import useMutexButtons from '../../hooks/useMutexButtons';
+import useMutexButtons from '../../../hooks/useMutexButtons';
 import MenuPopup from './MenuPopup';
 import useMenuController from './useMenuController';
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import type { FC } from 'react';
 import React, { useState } from 'react';
-import useSize from '../../hooks/useSize';
+import useSize from '../../../hooks/useSize';
 import MenuPopup from './MenuPopup';
 
 const MenuItem: FC<{
