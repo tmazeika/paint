@@ -3,6 +3,7 @@ import { faAdjust, faCropAlt, faFillDrip, faMousePointer, faPaintBrush } from '@
 import Head from 'next/head';
 import type { FC } from 'react';
 import React from 'react';
+import { MenuItem } from '../features/menu';
 import Header from './Header';
 import ToolBar from './ToolBar';
 import ToolButton from './ToolButton';
@@ -13,15 +14,18 @@ const Layout: FC = () => (
       <meta name="viewport" content="initial-scale=1, width=device-width" />
       <title>Paint</title>
     </Head>
-    <div className="w-[100vw] h-[100vh] app-grid font-sans text-white text-tiny">
-      <div className="row-start-1 col-start-1 col-end-4">
+    <div className="w-[100vw] h-[100vh] grid grid-rows-[min-content_auto] grid-cols-[min-content_auto_min-content] font-sans text-white text-tiny">
+      <div className="row-start-1 col-span-full">
         <Header />
       </div>
-      <main className="row-start-2 col-start-1 col-end-4 h-36" />
+      <main className="row-start-2 col-span-full h-36" />
       <div className="row-start-2 col-start-1">
         <ToolBar>
           <div>
-            <ToolButton id="mouse-pointer" icon={faMousePointer} />
+            <ToolButton id="mouse-pointer" icon={faMousePointer}>
+              <MenuItem value="Tweak" />
+              <MenuItem value="Twerk" />
+            </ToolButton>
             <ToolButton id="square" icon={faSquare} />
             <ToolButton id="adjust" icon={faAdjust} />
           </div>

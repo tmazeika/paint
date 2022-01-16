@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 import React from 'react';
-import MutexButtonProvider from './MutexButtonProvider';
+import MutexButtonsProvider from '../../components/MutexButtonsProvider';
 
 const MenuBar: FC = ({ children }) => (
   <div className="p-1">
-    <MutexButtonProvider>{children}</MutexButtonProvider>
+    <MutexButtonsProvider>{children}</MutexButtonsProvider>
   </div>
 );
 
