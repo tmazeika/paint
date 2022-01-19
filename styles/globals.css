@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* Like -top-0.5, but subtracts an extra pixel. */
   .-top-0\.5-1px {
     top: calc(-1px - theme('spacing[0.5]'));
   }
